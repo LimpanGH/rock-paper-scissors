@@ -1,5 +1,6 @@
 # rock-paper-scissors
 Codeecademy https://www.codecademy.com/courses/introduction-to-javascript/projects/rock-paper-scissors-javascript
+Tutorial: https://youtu.be/cKbN6-1ZQ3A
 
 
 Objective LEARN JAVASCRIPT.
