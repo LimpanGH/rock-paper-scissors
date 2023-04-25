@@ -1,5 +1,11 @@
 
-// Get the users choice
+/* Objective
+1 Get the user’s choice.
+2 Get the computer’s choice.
+3 Compare the two choices and determine a winner.
+4 Start the program and display the results. */
+
+// 1 Get the users choice
 const getUserChoice = userInput => {    // 3.1 The argument is passed to the param.
     userInput = userInput.toLowerCase(); // 3.2 Ensuring that input will be in lowercase.
     if (userInput == 'rock' || userInput == 'paper' || userInput == 'scissors' || userInput == 'bomb') {  // 3.3 If user choses any of theese, the choice will be returned to "playGame()".
@@ -10,7 +16,7 @@ const getUserChoice = userInput => {    // 3.1 The argument is passed to the par
   }
   /* console.log(getUserChoice()); */
   
-  // Get the computers choice
+  // 2 Get the computers choice
   const getComputerChoice = () => {
     const randomNumber = Math.floor(Math.random() * 3); {  // 4.1 Generating a random number between 0-2 without decimals (rounded down).
       switch (randomNumber) {                              // 4.2 Using swithch to run through a list of cases between 0-2 and returning corresponding strings depending on the random number that has been generated above.
@@ -29,7 +35,7 @@ const getUserChoice = userInput => {    // 3.1 The argument is passed to the par
   /* console.log(getComputerChoice()); */
   
   
-  // Determine winner
+  // 3 Determine winner
   const determineWinner = (userChoice, computerChoice) => { // 7.1 Inserting arguments to params.
     if (userChoice == 'bomb') {                             // 7.2 A list of if/if else arguments, true statement will be returned to the function-caller (determineWinner(userChoice, computerChoice)).
       return 'You used your bomb to win this round!';
@@ -63,7 +69,7 @@ const getUserChoice = userInput => {    // 3.1 The argument is passed to the par
     }
   // console.log(determineWinner('scissors', 'paper'));
   
-  // Function for running the game
+  // 4 Function for running the game
   const playGame = () => {                                  // 2. Playgame has no parameters.
     let userChoice = getUserChoice('rock');                 // 3. Declaring av variable and set it to invoke "getUserChoice" with rock, paper, scissors or bomb as argument.
     const computerChoice = getComputerChoice();             // 4. Declaring av variable and set it to invoke "getComputerChoice" with no argument.
