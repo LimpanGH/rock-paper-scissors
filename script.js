@@ -11,7 +11,7 @@ const getUserChoice = userInput => {    // 3.1 The argument is passed to the par
     if (userInput == 'rock' || userInput == 'paper' || userInput == 'scissors' || userInput == 'bomb') {  // 3.3 If user choses any of theese, the choice will be returned to "playGame()".
       return userInput;
     } else {
-      return 'Error'; // 3.4 If user choses something else, or misspells, 'error' will be returned to "playGame()"..
+      return 'Error, please type rock, paper or scissors. '; // 3.4 If user choses something else, or misspells, 'error' will be returned to "playGame()"..
       }
   }
   /* console.log(getUserChoice()); */
@@ -39,19 +39,21 @@ const getUserChoice = userInput => {    // 3.1 The argument is passed to the par
   const determineWinner = (userChoice, computerChoice) => { // 7.1 Inserting arguments to params.
     if (userChoice == 'bomb') {                             // 7.2 A list of if/if else arguments, true statement will be returned to the function-caller (determineWinner(userChoice, computerChoice)).
       return 'You used your bomb to win this round!';
+    }  
     
-    } else if (userChoice === computerChoice) {
+    if (userChoice === computerChoice) {
       return 'It\'s a tie!';
+    } 
     
-    } else if (userChoice === 'rock') {
-        if (computerChoice === 'paper') {
+    if (userChoice === 'rock') {
+        if (computerChoice === 'paper') {               // Nested if-statements.
           return 'Computer won!';
       } else {
           return 'You won!';
       }
     } 
     
-    else if (userChoice === 'paper') {
+    if (userChoice === 'paper') {
         if (computerChoice === 'scissors') {
           return 'The computer won!';
       } else {
@@ -59,7 +61,7 @@ const getUserChoice = userInput => {    // 3.1 The argument is passed to the par
       }
     }  
     
-    else if (userChoice === 'scissors') {
+    if (userChoice === 'scissors') {
       if (computerChoice === 'rock') {
         return 'The computer won!';
       } else {
@@ -81,10 +83,3 @@ const getUserChoice = userInput => {    // 3.1 The argument is passed to the par
   
   
   playGame();                                               // 1.  Function-call that invokes "playGame()".
-  
-  
-  
-  
-  
-  
-  
